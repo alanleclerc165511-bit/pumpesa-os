@@ -1,4 +1,9 @@
-<!-- REEMPLAZA SOLO EL CSS Y EL DIV OVERLAY POR ESTE -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🎂 Feliz Cumpleaños Mi Niño ❤️</title>
 
 <style>
 
@@ -22,7 +27,9 @@ background:black;
 color:white;
 }
 
-/* Canvas */
+/* =========================
+   CANVAS
+========================= */
 
 canvas{
 position:fixed;
@@ -42,9 +49,8 @@ min-height:100vh;
 display:flex;
 justify-content:center;
 align-items:flex-start;
-padding:40px 15px 120px;
+padding:80px 15px 120px;
 z-index:5;
-overflow-y:auto;
 }
 
 /* =========================
@@ -53,17 +59,15 @@ overflow-y:auto;
 
 .card{
 width:100%;
-max-width:900px;
-padding:25px;
-border-radius:25px;
+max-width:950px;
+padding:35px;
+border-radius:30px;
 background:rgba(0,0,0,0.45);
 backdrop-filter:blur(12px);
 border:1px solid rgba(255,255,255,0.12);
-box-shadow:0 0 40px rgba(255,0,120,0.3);
+box-shadow:0 0 50px rgba(255,0,120,0.3);
 text-align:center;
 animation:fadeIn 2s ease;
-margin-top:40px;
-margin-bottom:60px;
 }
 
 /* =========================
@@ -71,13 +75,13 @@ margin-bottom:60px;
 ========================= */
 
 h1{
-font-size:clamp(2.2rem,8vw,4rem);
+font-size:clamp(2.5rem,8vw,4.5rem);
 line-height:1.2;
 margin-bottom:25px;
 background:linear-gradient(90deg,#ff5ea8,#ffd6f0);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
-text-shadow:0 0 20px rgba(255,0,120,0.4);
+text-shadow:0 0 25px rgba(255,0,120,0.5);
 }
 
 /* =========================
@@ -88,7 +92,6 @@ p{
 font-size:clamp(1rem,4vw,1.25rem);
 line-height:2;
 color:#f5f5f5;
-word-wrap:break-word;
 }
 
 /* =========================
@@ -105,7 +108,7 @@ text-shadow:0 0 15px #ff77c8;
 ========================= */
 
 .languages{
-margin-top:25px;
+margin-top:30px;
 font-size:clamp(0.95rem,3.5vw,1.1rem);
 line-height:2;
 color:#ddd;
@@ -117,7 +120,7 @@ color:#ddd;
 
 .footer{
 margin-top:35px;
-font-size:1.1rem;
+font-size:1.2rem;
 color:#ffd6ea;
 padding-bottom:20px;
 }
@@ -130,7 +133,7 @@ padding-bottom:20px;
 position:fixed;
 top:15px;
 right:15px;
-font-size:12px;
+font-size:13px;
 color:red;
 text-shadow:0 0 10px red;
 animation:flicker 2s infinite;
@@ -138,12 +141,12 @@ z-index:20;
 }
 
 /* =========================
-   BOTON
+   BUTTON
 ========================= */
 
 button{
-margin-top:30px;
-padding:15px 25px;
+margin-top:35px;
+padding:16px 30px;
 border:none;
 border-radius:30px;
 font-size:1rem;
@@ -158,16 +161,16 @@ max-width:320px;
 }
 
 button:hover{
-transform:scale(1.03);
+transform:scale(1.05);
 }
 
 /* =========================
-   CARTA
+   SECRET LETTER
 ========================= */
 
 .secret{
 display:none;
-margin-top:30px;
+margin-top:35px;
 font-size:1rem;
 line-height:2;
 color:#fff0f6;
@@ -199,7 +202,7 @@ opacity:0.3;
 }
 
 /* =========================
-   RESPONSIVE EXTRA
+   RESPONSIVE
 ========================= */
 
 @media(max-width:600px){
@@ -210,8 +213,8 @@ padding-bottom:120px;
 }
 
 .card{
-padding:20px;
-border-radius:20px;
+padding:22px;
+border-radius:22px;
 }
 
 p{
@@ -225,10 +228,13 @@ line-height:1.9;
 }
 
 </style>
+</head>
 
-<!-- =========================
-     OVERLAY NUEVO
-========================= -->
+<body>
+
+<div class="st">
+⚡ STRANGER THINGS LOVE DIMENSION ⚡
+</div>
 
 <div class="overlay">
 
@@ -239,7 +245,7 @@ line-height:1.9;
 <p>
 Hoy es un día especial porque nació la persona que más amo en este mundo 💖<br><br>
 
-Mi cielo, no encuentro las palabras para explicarte todo lo que siento por ti...<br>
+Mi cielo... no encuentro las palabras exactas para decir todo lo que siento por ti.<br>
 Te amo demasiado ❤️<br>
 Daría lo que fuera por estar contigo ahora mismo.<br><br>
 
@@ -249,13 +255,13 @@ Y cuando llegue contigo, lo primero que haré será abrazarte fuerte.<br><br>
 Quiero hacer las cosas bien contigo.<br>
 Quiero conocer a tu mamá y a tus hermanas.<br>
 Quiero demostrarte que mi amor es verdadero.<br>
-Nunca te lastimaría.<br><br>
+Nunca te lastimaría ❤️<br><br>
 
 Eres el <span class="highlight">Espeon de mi Umbreon</span> 💜<br>
 Y algún día iremos juntos a Japón 🇯🇵<br><br>
 
 No sabes cuánto te amo...<br>
-Muy pronto iré contigo ❤️
+Muy pronto iré contigo 💖
 </p>
 
 <div class="languages">
@@ -272,12 +278,12 @@ Muy pronto iré contigo ❤️
 
 <div class="secret" id="secret">
 
-Mi niño... ❤️<br><br>
+Mi niño ❤️<br><br>
 
-Feliz cumpleaños 💖<br>
-Gracias por existir y hacer mi vida más bonita.<br>
-Prometo abrazarte, cuidarte y amarte siempre.<br><br>
+Feliz cumpleaños 🎂<br>
+Gracias por existir y hacer mi vida más bonita 💖<br><br>
 
+Prometo abrazarte, cuidarte y amarte siempre.<br>
 Quiero ver las estrellas contigo ✨<br>
 Quiero viajar contigo ✈️<br>
 Quiero vivir miles de aventuras contigo 💫<br><br>
@@ -294,3 +300,381 @@ Forever & Always ✨
 
 </div>
 </div>
+
+<!-- =========================
+     MUSICA
+========================= -->
+
+<audio autoplay loop>
+<source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_c8c8e0c54e.mp3?filename=beautiful-piano-for-love-111397.mp3" type="audio/mpeg">
+</audio>
+
+<!-- =========================
+     THREE JS
+========================= -->
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
+
+<script>
+
+/* =========================
+   ESCENA
+========================= */
+
+const scene = new THREE.Scene();
+
+const camera = new THREE.PerspectiveCamera(
+75,
+window.innerWidth / window.innerHeight,
+0.1,
+1000
+);
+
+const renderer = new THREE.WebGLRenderer({
+antialias:true,
+alpha:true
+});
+
+renderer.setSize(window.innerWidth,window.innerHeight);
+
+document.body.appendChild(renderer.domElement);
+
+camera.position.z = 30;
+
+/* =========================
+   LUCES
+========================= */
+
+const light1 = new THREE.PointLight(0xff66aa,2);
+light1.position.set(10,10,10);
+scene.add(light1);
+
+const light2 = new THREE.PointLight(0x66ccff,2);
+light2.position.set(-10,-10,10);
+scene.add(light2);
+
+/* =========================
+   ESTRELLAS FONDO
+========================= */
+
+const starsGeometry = new THREE.BufferGeometry();
+
+const starsCount = 4000;
+
+const starsArray = new Float32Array(starsCount * 3);
+
+for(let i=0;i<starsCount*3;i++){
+
+starsArray[i]=(Math.random()-0.5)*400;
+
+}
+
+starsGeometry.setAttribute(
+'position',
+new THREE.BufferAttribute(starsArray,3)
+);
+
+const starsMaterial = new THREE.PointsMaterial({
+size:0.3
+});
+
+const stars = new THREE.Points(
+starsGeometry,
+starsMaterial
+);
+
+scene.add(stars);
+
+/* =========================
+   CORAZONES 3D
+========================= */
+
+const hearts=[];
+
+function createHeartShape(){
+
+const shape = new THREE.Shape();
+
+shape.moveTo(0,0);
+
+shape.bezierCurveTo(0,0,-2,-2,-4,0);
+shape.bezierCurveTo(-6,2,-6,6,-4,8);
+shape.bezierCurveTo(-2,10,0,12,0,12);
+
+shape.bezierCurveTo(0,12,2,10,4,8);
+shape.bezierCurveTo(6,6,6,2,4,0);
+shape.bezierCurveTo(2,-2,0,0,0,0);
+
+return shape;
+
+}
+
+for(let i=0;i<35;i++){
+
+const geometry = new THREE.ExtrudeGeometry(
+createHeartShape(),
+{
+depth:1,
+bevelEnabled:true,
+bevelSegments:2,
+steps:2,
+bevelSize:0.5,
+bevelThickness:0.5
+}
+);
+
+const material = new THREE.MeshStandardMaterial({
+color:0xff2d75,
+metalness:0.5,
+roughness:0.2
+});
+
+const heart = new THREE.Mesh(geometry,material);
+
+heart.scale.set(0.25,0.25,0.25);
+
+heart.position.x=(Math.random()-0.5)*80;
+heart.position.y=(Math.random()-0.5)*60;
+heart.position.z=(Math.random()-0.5)*80;
+
+heart.rotation.x=Math.random()*Math.PI;
+heart.rotation.y=Math.random()*Math.PI;
+
+scene.add(heart);
+
+hearts.push(heart);
+
+}
+
+/* =========================
+   POKEBOLAS 3D
+========================= */
+
+const pokeballs=[];
+
+for(let i=0;i<15;i++){
+
+const group = new THREE.Group();
+
+const sphere = new THREE.SphereGeometry(1.5,32,32);
+
+const top = new THREE.Mesh(
+sphere,
+new THREE.MeshStandardMaterial({
+color:0xff0000
+})
+);
+
+top.scale.y = 0.5;
+top.position.y = 0.75;
+
+const bottom = new THREE.Mesh(
+sphere,
+new THREE.MeshStandardMaterial({
+color:0xffffff
+})
+);
+
+bottom.scale.y = 0.5;
+bottom.position.y = -0.75;
+
+const middle = new THREE.Mesh(
+new THREE.CylinderGeometry(1.55,1.55,0.2,32),
+new THREE.MeshStandardMaterial({
+color:0x000000
+})
+);
+
+const button = new THREE.Mesh(
+new THREE.CylinderGeometry(0.3,0.3,0.3,32),
+new THREE.MeshStandardMaterial({
+color:0xffffff,
+emissive:0xffffff,
+emissiveIntensity:0.5
+})
+);
+
+button.rotation.z = Math.PI/2;
+
+group.add(top);
+group.add(bottom);
+group.add(middle);
+group.add(button);
+
+group.position.x=(Math.random()-0.5)*80;
+group.position.y=(Math.random()-0.5)*60;
+group.position.z=(Math.random()-0.5)*80;
+
+scene.add(group);
+
+pokeballs.push(group);
+
+}
+
+/* =========================
+   GLOBOS
+========================= */
+
+const balloons=[];
+
+for(let i=0;i<25;i++){
+
+const balloon = new THREE.Mesh(
+new THREE.SphereGeometry(0.8,32,32),
+new THREE.MeshStandardMaterial({
+color:Math.random()*0xffffff
+})
+);
+
+balloon.position.x=(Math.random()-0.5)*90;
+balloon.position.y=(Math.random()-0.5)*70;
+balloon.position.z=(Math.random()-0.5)*80;
+
+scene.add(balloon);
+
+balloons.push(balloon);
+
+}
+
+/* =========================
+   CONFETI
+========================= */
+
+const confetti=[];
+
+for(let i=0;i<700;i++){
+
+const piece = new THREE.Mesh(
+new THREE.BoxGeometry(0.1,0.1,0.1),
+new THREE.MeshBasicMaterial({
+color:Math.random()*0xffffff
+})
+);
+
+piece.position.x=(Math.random()-0.5)*120;
+piece.position.y=(Math.random()-0.5)*120;
+piece.position.z=(Math.random()-0.5)*120;
+
+scene.add(piece);
+
+confetti.push(piece);
+
+}
+
+/* =========================
+   ANIMACION
+========================= */
+
+function animate(){
+
+requestAnimationFrame(animate);
+
+/* estrellas */
+
+stars.rotation.y += 0.0007;
+
+/* corazones */
+
+hearts.forEach((heart,index)=>{
+
+heart.rotation.y += 0.01;
+heart.rotation.x += 0.005;
+
+heart.position.y += Math.sin(Date.now()*0.001+index)*0.003;
+
+});
+
+/* pokebolas */
+
+pokeballs.forEach((ball,index)=>{
+
+ball.rotation.y += 0.01;
+ball.rotation.x += 0.003;
+
+ball.position.y += Math.sin(Date.now()*0.001+index)*0.004;
+
+});
+
+/* globos */
+
+balloons.forEach((balloon,index)=>{
+
+balloon.position.y += 0.03;
+
+if(balloon.position.y > 50){
+
+balloon.position.y = -50;
+
+}
+
+});
+
+/* confeti */
+
+confetti.forEach((piece,index)=>{
+
+piece.rotation.x += 0.02;
+piece.rotation.y += 0.02;
+
+piece.position.y -= 0.07;
+
+if(piece.position.y < -60){
+
+piece.position.y = 60;
+
+}
+
+});
+
+renderer.render(scene,camera);
+
+}
+
+animate();
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+window.addEventListener('resize',()=>{
+
+camera.aspect = window.innerWidth/window.innerHeight;
+
+camera.updateProjectionMatrix();
+
+renderer.setSize(
+window.innerWidth,
+window.innerHeight
+);
+
+});
+
+/* =========================
+   BOTON CARTA
+========================= */
+
+function showSecret(){
+
+const secret = document.getElementById("secret");
+
+if(secret.style.display === "block"){
+
+secret.style.display = "none";
+
+}else{
+
+secret.style.display = "block";
+
+window.scrollTo({
+top:document.body.scrollHeight,
+behavior:"smooth"
+});
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
