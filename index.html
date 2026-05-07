@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feliz Cumpleaños Mi Niño ❤️</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+overflow:hidden;
+font-family:'Segoe UI',sans-serif;
+background:black;
+color:white;
+}
+
+/* Canvas */
+canvas{
+position:fixed;
+top:0;
+left:0;
+}
+
+/* Overlay */
+.overlay{
+position:absolute;
+width:100%;
+height:100%;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
+z-index:5;
+}
+
+/* Caja principal */
+.card{
+max-width:950px;
+padding:40px;
+border-radius:30px;
+background:rgba(0,0,0,0.35);
+backdrop-filter:blur(10px);
+border:1px solid rgba(255,255,255,0.15);
+box-shadow:0 0 50px rgba(255,0,120,0.3);
+text-align:center;
+animation:fadeIn 3s ease;
+}
+
+/* Título */
+h1{
+font-size:4rem;
+margin-bottom:20px;
+background:linear-gradient(90deg,#ff5ea8,#ffd6f0);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+text-shadow:0 0 20px rgba(255,0,120,0.4);
+}
+
+/* Texto */
+p{
+font-size:1.2rem;
+line-height:2;
+color:#f5f5f5;
+}
+
+.highlight{
+color:#ff77c8;
+text-shadow:0 0 15px #ff77c8;
+}
+
+/* Idiomas */
+.languages{
+margin-top:25px;
+font-size:1rem;
+line-height:1.8;
+color:#ddd;
+}
+
+/* Footer */
+.footer{
+margin-top:30px;
+font-size:1.2rem;
+color:#ffd6ea;
+}
+
+/* Stranger Things */
+.st{
+position:absolute;
+top:20px;
+right:20px;
+font-size:14px;
+color:red;
+text-shadow:0 0 10px red;
+animation:flicker 2s infinite;
+z-index:10;
+}
+
+/* Botón */
+button{
+margin-top:30px;
+padding:15px 30px;
+border:none;
+border-radius:30px;
+font-size:1rem;
+cursor:pointer;
+background:linear-gradient(90deg,#ff2d75,#ff7ec7);
+color:white;
+font-weight:bold;
+transition:0.3s;
+box-shadow:0 0 20px rgba(255,0,120,0.5);
+}
+
+button:hover{
+transform:scale(1.05);
+}
+
+/* Carta secreta */
+.secret{
+display:none;
+margin-top:25px;
+font-size:1.1rem;
+line-height:2;
+color:#fff0f6;
+animation:fadeIn 2s ease;
+}
+
+/* Animaciones */
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@keyframes flicker{
+0%,18%,22%,25%,53%,57%,100%{
+opacity:1;
+}
+20%,24%,55%{
+opacity:0.3;
+}
+}
+</style>
+</head>
+
+<body>
+
+<div class="st">
+⚡ STRANGER THINGS LOVE DIMENSION ⚡
+</div>
+
+<div class="overlay">
+<div class="card">
+
+<h1>🎂 Feliz Cumpleaños Mi Niño ❤️</h1>
+
+<p>
+Hoy es un día especial porque nació la persona que más amo en este mundo 💖<br><br>
+
+Mi cielo, no encuentro las palabras para explicarte todo lo que siento por ti...<br>
+Te amo demasiado ❤️<br>
+Daría lo que fuera por estar contigo ahora mismo.<br><br>
+
+Muy pronto veremos las estrellas juntos ✨<br>
+Y cuando llegue contigo, lo primero que haré será abrazarte fuerte.<br><br>
+
+Quiero hacer las cosas bien contigo.<br>
+Quiero conocer a tu mamá y a tus hermanas.<br>
+Quiero demostrarte que mi amor es verdadero.<br>
+Nunca te lastimaría.<br><br>
+
+Eres el <span class="highlight">Espeon de mi Umbreon</span> 💜<br>
+Y algún día iremos juntos a Japón 🇯🇵<br><br>
+
+No sabes cuánto te amo...<br>
+Muy pronto iré contigo ❤️
+</p>
+
+<div class="languages">
+🇪🇸 Te amo muchísimo<br>
+🇺🇸 I love you more than words can explain<br>
+🇫🇷 Mon Soleil ☀️ Je t’aime infiniment<br>
+🇮🇹 Ti amerò per sempre ❤️<br>
+🇩🇪 Du bist mein Himmel ✨
+</div>
+
+<button onclick="showSecret()">
+💌 Abrir Carta Secreta
+</button>
+
+<div class="secret" id="secret">
+Mi niño...<br><br>
+
+Feliz cumpleaños ❤️<br>
+Gracias por existir y llegar a mi vida.<br>
+Prometo abrazarte, cuidarte y amarte siempre.<br>
+Quiero vivir muchísimas aventuras contigo ✨<br>
+Ver las estrellas, viajar a Japón, jugar juntos y crear recuerdos hermosos 💖<br><br>
+
+Eres mi lugar seguro.<br>
+Mi persona favorita.<br>
+Mi amor verdadero ❤️
+</div>
+
+<div class="footer">
+Forever & Always ✨
+</div>
+
+</div>
+</div>
+
+<!-- Música -->
+<audio autoplay loop>
+<source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_c8c8e0c54e.mp3?filename=beautiful-piano-for-love-111397.mp3" type="audio/mpeg">
+</audio>
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
+
+<script>
+
+/* =========================
+   ESCENA 3D
+========================= */
+
+const scene = new THREE.Scene();
+
+const camera = new THREE.PerspectiveCamera(
+75,
+window.innerWidth/window.innerHeight,
+0.1,
+1000
+);
+
+const renderer = new THREE.WebGLRenderer({
+antialias:true,
+alpha:true
+});
+
+renderer.setSize(window.innerWidth,window.innerHeight);
+
+document.body.appendChild(renderer.domElement);
+
+camera.position.z = 30;
+
+/* Luces */
+
+const light1 = new THREE.PointLight(0xff66aa,2);
+light1.position.set(10,10,10);
+scene.add(light1);
+
+const light2 = new THREE.PointLight(0x66ccff,2);
+light2.position.set(-10,-10,10);
+scene.add(light2);
+
+/* =========================
+   ESTRELLAS
+========================= */
+
+const starsGeometry = new THREE.BufferGeometry();
+const starsCount = 3000;
+
+const starsArray = new Float32Array(starsCount * 3);
+
+for(let i=0;i<starsCount*3;i++){
+starsArray[i]=(Math.random()-0.5)*300;
+}
+
+starsGeometry.setAttribute(
+'position',
+new THREE.BufferAttribute(starsArray,3)
+);
+
+const starsMaterial = new THREE.PointsMaterial({
+size:0.2
+});
+
+const stars = new THREE.Points(
+starsGeometry,
+starsMaterial
+);
+
+scene.add(stars);
+
+/* =========================
+   CORAZONES 3D
+========================= */
+
+const hearts=[];
+
+function createHeartShape(){
+
+const shape = new THREE.Shape();
+
+shape.moveTo(0,0);
+
+shape.bezierCurveTo(0,0,-2,-2,-4,0);
+shape.bezierCurveTo(-6,2,-6,6,-4,8);
+shape.bezierCurveTo(-2,10,0,12,0,12);
+
+shape.bezierCurveTo(0,12,2,10,4,8);
+shape.bezierCurveTo(6,6,6,2,4,0);
+shape.bezierCurveTo(2,-2,0,0,0,0);
+
+return shape;
+}
+
+for(let i=0;i<30;i++){
+
+const geometry = new THREE.ExtrudeGeometry(
+createHeartShape(),
+{
+depth:1,
+bevelEnabled:true,
+bevelSegments:2,
+steps:2,
+bevelSize:0.5,
+bevelThickness:0.5
+}
+);
+
+const material = new THREE.MeshStandardMaterial({
+color:0xff2d75,
+metalness:0.5,
+roughness:0.2
+});
+
+const heart = new THREE.Mesh(geometry,material);
+
+heart.scale.set(0.25,0.25,0.25);
+
+heart.position.x=(Math.random()-0.5)*70;
+heart.position.y=(Math.random()-0.5)*50;
+heart.position.z=(Math.random()-0.5)*60;
+
+scene.add(heart);
+
+hearts.push(heart);
+}
+
+/* =========================
+   POKEBOLAS 3D
+========================= */
+
+const pokeballs=[];
+
+for(let i=0;i<12;i++){
+
+const group = new THREE.Group();
+
+const sphere = new THREE.SphereGeometry(1.5,32,32);
+
+const top = new THREE.Mesh(
+sphere,
+new THREE.MeshStandardMaterial({color:0xff0000})
+);
+
+top.scale.y=0.5;
+top.position.y=0.75;
+
+const bottom = new THREE.Mesh(
+sphere,
+new THREE.MeshStandardMaterial({color:0xffffff})
+);
+
+bottom.scale.y=0.5;
+bottom.position.y=-0.75;
+
+const middle = new THREE.Mesh(
+new THREE.CylinderGeometry(1.55,1.55,0.2,32),
+new THREE.MeshStandardMaterial({color:0x000000})
+);
+
+const button = new THREE.Mesh(
+new THREE.CylinderGeometry(0.3,0.3,0.3,32),
+new THREE.MeshStandardMaterial({
+color:0xffffff,
+emissive:0xffffff,
+emissiveIntensity:0.5
+})
+);
+
+button.rotation.z=Math.PI/2;
+
+group.add(top);
+group.add(bottom);
+group.add(middle);
+group.add(button);
+
+group.position.x=(Math.random()-0.5)*70;
+group.position.y=(Math.random()-0.5)*50;
+group.position.z=(Math.random()-0.5)*60;
+
+scene.add(group);
+
+pokeballs.push(group);
+}
+
+/* =========================
+   GLOBOS
+========================= */
+
+const balloons=[];
+
+for(let i=0;i<20;i++){
+
+const balloon = new THREE.Mesh(
+new THREE.SphereGeometry(0.8,32,32),
+new THREE.MeshStandardMaterial({
+color:Math.random()*0xffffff
+})
+);
+
+balloon.position.x=(Math.random()-0.5)*80;
+balloon.position.y=(Math.random()-0.5)*60;
+balloon.position.z=(Math.random()-0.5)*60;
+
+scene.add(balloon);
+
+balloons.push(balloon);
+}
+
+/* =========================
+   CONFETI
+========================= */
+
+const confetti=[];
+
+for(let i=0;i<500;i++){
+
+const piece = new THREE.Mesh(
+new THREE.BoxGeometry(0.1,0.1,0.1),
+new THREE.MeshBasicMaterial({
+color:Math.random()*0xffffff
+})
+);
+
+piece.position.x=(Math.random()-0.5)*100;
+piece.position.y=(Math.random()-0.5)*100;
+piece.position.z=(Math.random()-0.5)*100;
+
+scene.add(piece);
+
+confetti.push(piece);
+}
+
+/* =========================
+   ANIMACIÓN
+========================= */
+
+function animate(){
+
+requestAnimationFrame(animate);
+
+stars.rotation.y += 0.0005;
+
+/* Corazones */
+
+hearts.forEach((heart,index)=>{
+
+heart.rotation.y += 0.01;
+heart.rotation.x += 0.005;
+
+heart.position.y += Math.sin(Date.now()*0.001+index)*0.003;
+
+});
+
+/* Pokebolas */
+
+pokeballs.forEach((ball,index)=>{
+
+ball.rotation.y += 0.01;
+ball.rotation.x += 0.003;
+
+ball.position.y += Math.sin(Date.now()*0.001+index)*0.004;
+
+});
+
+/* Globos */
+
+balloons.forEach((balloon,index)=>{
+
+balloon.position.y += 0.02;
+
+if(balloon.position.y > 40){
+balloon.position.y = -40;
+}
+
+});
+
+/* Confeti */
+
+confetti.forEach((piece,index)=>{
+
+piece.rotation.x += 0.02;
+piece.rotation.y += 0.02;
+
+piece.position.y -= 0.05;
+
+if(piece.position.y < -50){
+piece.position.y = 50;
+}
+
+});
+
+renderer.render(scene,camera);
+
+}
+
+animate();
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+window.addEventListener('resize',()=>{
+
+camera.aspect = window.innerWidth/window.innerHeight;
+
+camera.updateProjectionMatrix();
+
+renderer.setSize(
+window.innerWidth,
+window.innerHeight
+);
+
+});
+
+/* =========================
+   CARTA SECRETA
+========================= */
+
+function showSecret(){
+
+const secret = document.getElementById("secret");
+
+if(secret.style.display === "block"){
+secret.style.display = "none";
+}else{
+secret.style.display = "block";
+}
+
+}
+
+</script>
+
+</body>
+</html>
